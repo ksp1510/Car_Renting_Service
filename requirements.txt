@@ -1,0 +1,21 @@
+Werkzeug~=2.0.1
+Flask~=2.0.1
+WTForms~=2.3.3
+flask_wtf
+email_validator
+
+first name
+last name
+address
+city
+pincode
+contact number
+email
+user id
+password
+re type passwd
+license number
+license validity
+Rto circle
+license front
+license rear

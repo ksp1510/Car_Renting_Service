@@ -1,0 +1,125 @@
+body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+#nav {
+    margin-bottom: -13px;
+    margin-top: -15px;
+    margin-left: -200px;
+    background-color: #495057;
+}
+#container {
+  /* The image used */
+  background-image: url("./image/bg7.jpg");
+
+  /* Control the height of the image */
+  min-height: 850px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#container1 {
+  /* The image used */
+  background-image: url("./image/bg5.png");
+
+  /* Control the height of the image */
+  min-height: 850px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#try{
+  position: absolute;
+  left: 150px;
+  top: 250px;
+  margin: 0px;
+  max-width: 400px;
+  padding: 16px;
+  background-color: #ffffff00;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#try1{
+  position: absolute;
+  right: 250px;
+  top: 100px;
+  margin: 0px;
+  max-width: 500px;
+  padding: 16px;
+  background-color: #ffffff00;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#trick{
+  position: absolute;
+  margin: 0px;
+  max-width: 400px;
+  padding: 16px;
+  background-color: #ffffff00;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #ffffff;
+  opacity: 0.6;
+}
+
+select {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #ffffff;
+  opacity: 1;
+}
+
+#text{
+    background: #ffffff00;
+}
+
+#btn{
+    background: #ffffff00;
+    text-decoration: black;
+    border: 5 px;
+    border-color: black;
+}
+
+#btn:hover {
+  opacity: 1;
+}
+
+footer{padding: 10px 0;
+ background-color: #101010;
+ color:#9d9d9d;
+ bottom: 0;
+ width: 100%;}
+.content{min-height: 604px;}
+
+input[type=text], input[type=date] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border-color: black;
+  border-width: 1px;
+  background: whitesmoke;
+  opacity: 1;
+}
+
+td {
+    padding-right: 60;
+    margin-bottom: -2;
+}
