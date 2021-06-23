@@ -1,5 +1,5 @@
 from flask_wtf import Form
-from wtforms import TextField, TextAreaField, SubmitField, RadioField, PasswordField, DateField, FileField
+from wtforms import TextField, TextAreaField, SubmitField, PasswordField, DateField, FileField
 from wtforms import validators
 
 
@@ -26,7 +26,11 @@ class SignUpForm(Form):
 
 
 
+
+
 class LoginForm(Form):
       userid = TextField("User ID", [validators.Required("Please enter your user id.")])
       password = PasswordField("Password", [validators.Required("Please enter your password.")])
       submit = SubmitField("LOGIN")
+      reg = SubmitField("Register Here")
+      reg = SubmitField("Register Here")

@@ -5,12 +5,22 @@ body, html {
 * {
   box-sizing: border-box;
 }
+#nbrand {
+    padding: 0px;
+    width: 200px;
+}
 #nav {
-    margin-bottom: -13px;
-    margin-top: -15px;
+
     margin-left: -200px;
     background-color: #495057;
 }
+
+#banner{
+    background-image: url("./image/bg3.jpg");
+    min-height: 500px;
+    width: 100%;
+}
+
 #container {
   /* The image used */
   background-image: url("./image/bg7.jpg");
@@ -55,7 +65,7 @@ body, html {
   right: 250px;
   top: 100px;
   margin: 0px;
-  max-width: 500px;
+  max-width: 100%;
   padding: 16px;
   background-color: #ffffff00;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
@@ -122,4 +132,14 @@ input[type=text], input[type=date] {
 td {
     padding-right: 60;
     margin-bottom: -2;
+}
+
+#rental{
+    background-color: #ffffff00;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+#rental{
+    background-color: #ffffff00;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
