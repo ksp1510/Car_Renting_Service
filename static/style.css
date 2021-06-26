@@ -61,10 +61,8 @@ body, html {
 }
 
 #try1{
-  position: absolute;
-  right: 250px;
-  top: 100px;
-  margin: 0px;
+  left: 150px;
+  top: 250px;
   max-width: 100%;
   padding: 16px;
   background-color: #ffffff00;
@@ -102,10 +100,11 @@ select {
 }
 
 #btn{
-    background: #ffffff00;
+    background: #339af0;
     text-decoration: black;
     border: 5 px;
     border-color: black;
+    opacity: 0.6;
 }
 
 #btn:hover {

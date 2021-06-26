@@ -22,7 +22,7 @@ class SignUpForm(Form):
       lic_rear = FileField("License Rear Side")
 
       submit = SubmitField("Submit")
-      submit1 = SubmitField("Next")
+
 
 
 
@@ -32,5 +32,4 @@ class LoginForm(Form):
       userid = TextField("User ID", [validators.Required("Please enter your user id.")])
       password = PasswordField("Password", [validators.Required("Please enter your password.")])
       submit = SubmitField("LOGIN")
-      reg = SubmitField("Register Here")
       reg = SubmitField("Register Here")
