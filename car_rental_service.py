@@ -12,10 +12,10 @@ app.secret_key = "kjjjgjgkjlhuaiy7u"
 
 @app.route('/')
 def home():
-    return redirect(url_for('login'))
+    return render_template('home.html')
 
 
-@app.route('/login')
+@app.route('/login',methods=['GET', 'POST'])
 def login():
     form = LoginForm()
     if form.validate_on_submit():
