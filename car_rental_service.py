@@ -49,6 +49,9 @@ def signup2():
 def success():
     return render_template("success.html")
 
+@app.route('/cars')
+def cars():
+    return render_template("cars.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
