@@ -1,18 +1,20 @@
 import json
 import os.path
+
+import pymongo as pymongo
 from werkzeug.utils import secure_filename
 
 from flask import Flask, render_template, request, redirect, url_for, flash, abort, session, jsonify,request, redirect
 from form import SignUpForm, LoginForm
-#from flask_mongoalchemy import MongoAlchemy
-#from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
+
 
 app = Flask(__name__)
 app.secret_key = "kjjjgjgkjlhuaiy7u"
+conn_string = "mongodb+srv://ksp1510:kishan@cluster0.syoit.mongodb.net/db_rental?ssl=true&ssl_cert_reqs=CERT_NONE&retryWrites=true&w=majority"
+my_client = pymongo.MongoClient(conn_string)
+db = my_client["users"]
 
-'''app.config['MONGOALCHEMY_DATABASE'] = 'library'
-db = MongoAlchemy(app)'''
+
 
 
 
@@ -29,12 +31,20 @@ def login():
     return render_template('login.html', form=form)
 
 
-@app.route('/signup', methods=['GET', 'POST'])
+@app.route('/signup')
 def signup():
     form = SignUpForm()
     if form.validate_on_submit():
         flash('All fields are required.')
     return render_template('sign_up.html', form=form)
+
+
+@app.route('/success', methods=['GET', 'POST'])
+def success():
+    if request.method == 'POST':
+        pass
+
+    return render_template('success.html')
 
 
 @app.route('/aboutus', methods=['GET', 'POST'])
