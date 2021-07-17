@@ -142,3 +142,8 @@ td {
     background-color: #ffffff00;
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
 }
+
+#product{
+    height:140px;
+    width:270px;
+}
