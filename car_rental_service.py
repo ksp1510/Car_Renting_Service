@@ -42,7 +42,20 @@ def signup():
 @app.route('/success', methods=['GET', 'POST'])
 def success():
     if request.method == 'POST':
-        pass
+        fname = request.form['fname']
+        lname = request.form['lname']
+        add = request.form['add']
+        city = request.form['city']
+        pin = request.form['pin']
+        contact = request.form['contact']
+        email = request.form['email']
+        userid = request.form['userid']
+        password = request.form['password']
+        lic_num = request.form['lic_num']
+        lic_val = request.form['lic_val']
+        rto = request.form['rto']
+
+
 
     return render_template('success.html')
 
@@ -54,10 +67,6 @@ def aboutus():
         flash('All fields are required.')
     return render_template('aboutus.html', form=form)
 
-
-@app.route('/success', methods=['GET', 'POST'])
-def success():
-    return render_template("success.html")
 
 @app.route('/cars')
 def cars():
