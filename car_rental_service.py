@@ -12,7 +12,8 @@ app = Flask(__name__)
 app.secret_key = "kjjjgjgkjlhuaiy7u"
 conn_string = "mongodb+srv://ksp1510:kishan@cluster0.syoit.mongodb.net/db_rental?ssl=true&ssl_cert_reqs=CERT_NONE&retryWrites=true&w=majority"
 my_client = pymongo.MongoClient(conn_string)
-db = my_client["users"]
+db = my_client["db_rental"]
+user = db['users']
 
 
 
@@ -55,6 +56,11 @@ def success():
         lic_val = request.form['lic_val']
         rto = request.form['rto']
 
+        mydict = {"First_Name":fname, "Last_Name":lname, "Address":add, "City":city, "Pincode":pin, "Contact":contact,
+                  "E-mail":email, "User_Id":userid, "Password":password, "License-Numebr":lic_num, "Validity":lic_val,
+                  "RTO":rto}
+        x = user.insert_one(mydict)
+        print(x)
 
 
     return render_template('success.html')
