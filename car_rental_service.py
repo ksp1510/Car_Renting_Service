@@ -40,8 +40,8 @@ def signup():
     return render_template('sign_up.html', form=form)
 
 
-@app.route('/success', methods=['GET', 'POST'])
-def success():
+@app.route('/cars', methods=['GET', 'POST'])
+def cars():
     if request.method == 'POST':
         fname = request.form['fname']
         lname = request.form['lname']
@@ -63,7 +63,7 @@ def success():
         print(x)
 
 
-    return render_template('success.html')
+    return render_template("cars.html")
 
 
 @app.route('/aboutus', methods=['GET', 'POST'])
@@ -74,9 +74,9 @@ def aboutus():
     return render_template('aboutus.html', form=form)
 
 
-@app.route('/cars')
-def cars():
-    return render_template("cars.html")
+
+
+
 
 '''Including SQLAlchemy Database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
