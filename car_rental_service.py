@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 
 from flask import Flask, render_template, request, redirect, url_for, flash, abort, session, jsonify,request, redirect
 from form import SignUpForm, LoginForm
-from flask_mongoalchemy import MongoAlchemy
+#from flask_mongoalchemy import MongoAlchemy
 #from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -36,12 +36,6 @@ def signup():
         flash('All fields are required.')
     return render_template('sign_up.html', form=form)
 
-@app.route('/signup1', methods=['GET', 'POST'])
-def signup1():
-    form = SignUpForm()
-    if form.validate_on_submit():
-        flash('All fields are required.')
-    return render_template('sign_up1.html', form=form)
 
 @app.route('/aboutus', methods=['GET', 'POST'])
 def aboutus():
@@ -49,13 +43,6 @@ def aboutus():
     if form.validate_on_submit():
         flash('All fields are required.')
     return render_template('aboutus.html', form=form)
-
-@app.route('/signup2', methods=['GET', 'POST'])
-def signup2():
-    form = SignUpForm()
-    if form.validate_on_submit():
-        flash('All fields are required.')
-    return render_template('sign_up2.html', form=form)
 
 
 @app.route('/success', methods=['GET', 'POST'])
