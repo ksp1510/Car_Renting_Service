@@ -4,28 +4,54 @@
 
 {% block main %}
 
-<div class="container-fluid content">
-    <div style="width:23%; float:left;">left</div>
-    <div style="width:75%; float:right;">right
+<div class="container-fluid" style=" position: relative; padding-top: 50px;">
+    <div style="width:23%; float:left;">
+        <div><img src="./static/image/add1.jpg" height="300px" width="350px"></div>
+        <div><img src="./static/image/add2.jpg" height="300px" width="350px"></div>
+    </div>
+    <div style="width:75%; float:right;">
         <div style="height:150px; background-color:cyan; margin:3px 3px 3px 3px;">
             <table style="width:100%; height:100%; border:dotted 2px; margin:2px 2px 2px 2px;">
-                <tr><td><img id="product" src="./static/image/car1.jpg"></td>
-                    <td><button type="button" value="book"></button></td><td>3</td></tr>
+                <tr><td style="width:300px;"><img id="product" src="./static/image/car1.jpg"></td>
+                    <td><button class="btn" id="book" type="button" value="book">BOOK</button></td>
+                    <td><div class="detail"><h3>(Model and Name of the car)</h3>
+                        <div><p><b>4.9</b><span class="glyphicon glyphicon-star"></span></p></div>
+                        <div><span class="glyphicon glyphicon-scale"></span><b> Petrol</b>
+                            &nbsp;<b><span class="glyphicon glyphicon-info-sign"></span> 5 seater</b></div>
+                    </div></td></tr>
             </table>
         </div>
         <div style="height:150px; background-color:cyan; margin:3px 3px 3px 3px;">
         <table style="width:100%; height:100%; border:dotted 2px; margin:2px 2px 2px 2px;">
-            <tr><td><img id="product" src="./static/image/car2.jpg"></td><td>2</td><td>3</td></tr>
+            <tr><td style="width:300px;"><img id="product" src="./static/image/car2.jpg"></td>
+                <td><button class="btn" id="book" type="button" value="book">BOOK</button></td>
+                <td><div class="detail"><h3>(Model and Name of the car)</h3>
+                        <div><p><b>4.6</b><span class="glyphicon glyphicon-star"></span></p></div>
+                        <div><span class="glyphicon glyphicon-scale"></span><b> Petrol</b>
+                            &nbsp;<b><span class="glyphicon glyphicon-info-sign"></span> 5 seater</b></div>
+                    </div></td></tr>
         </table>
         </div>
         <div style="height:150px; background-color:cyan; margin:3px 3px 3px 3px;">
         <table style="width:100%; height:100%; border:dotted 2px; margin:2px 2px 2px 2px;">
-            <tr><td><img id="product" src="./static/image/car3.jpg"></td><td>2</td><td>3</td></tr>
+            <tr><td style="width:300px;"><img id="product" src="./static/image/car3.jpg"></td>
+                <td><button class="btn" id="book" type="button" value="book">BOOK</button></td>
+                <td><div class="detail"><h3>(Model and Name of the car)</h3>
+                        <div><p><b>4.8</b><span class="glyphicon glyphicon-star"></span></p></div>
+                        <div><span class="glyphicon glyphicon-scale"></span><b> Diesel</b>
+                            &nbsp;<b><span class="glyphicon glyphicon-info-sign"></span> 4 seater</b></div>
+                    </div></td></tr>
         </table>
         </div>
         <div style="height:150px; background-color:cyan; margin:3px 3px 3px 3px;">
         <table style="width:100%; height:100%; border:dotted 2px; margin:2px 2px 2px 2px;">
-            <tr><td><img id="product" src="./static/image/car4.jpg"></td><td>2</td><td>3</td></tr>
+            <tr><td style="width:300px;"><img id="product" src="./static/image/car4.jpg"></td>
+                <td><button class="btn" id="book" type="button" value="book">BOOK</button></td>
+                <td><div class="detail"><h3>(Model and Name of the car)</h3>
+                        <div><p><b>4.7</b><span class="glyphicon glyphicon-star"></span></p></div>
+                        <div><span class="glyphicon glyphicon-scale"></span><b> Petrol</b>
+                            &nbsp;<b><span class="glyphicon glyphicon-info-sign"></span> 7 seater</b></div>
+                    </div></td></tr>
         </table>
         </div>
 
