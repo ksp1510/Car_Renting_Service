@@ -147,3 +147,11 @@ td {
     height:140px;
     width:270px;
 }
+
+#book{
+    width:60px;
+}
+
+.detail{
+position: relative;
+}
