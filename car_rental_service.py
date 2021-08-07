@@ -15,8 +15,29 @@ db = my_client["db_rental"]
 user = db['users']
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def home():
+    return render_template('home.html')
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        flash('All fields are required.')
+    return render_template('login.html', form=form)
+
+
+@app.route('/signup')
+def signup():
+    form = SignUpForm()
+    if form.validate_on_submit():
+        flash('All fields are required.')
+    return render_template('sign_up.html', form=form)
+
+
+@app.route('/cars', methods=['GET', 'POST'])
+def cars():
     if request.method == 'POST':
         fname = request.form['fname']
         lname = request.form['lname']
@@ -36,50 +57,10 @@ def home():
                   "E-mail": email, "User_Id": userid, "Password": password, "License-Numebr": lic_num,
                   "Validity": lic_val,
                   "RTO": rto}
+
         x = user.insert_one(mydict)
         print(x)
-    return render_template('home.html')
 
-
-@app.route('/index', methods=['GET', 'POST'])
-def home1():
-    if request.method == 'POST':
-        userid = request.form['userid']
-        password = request.form['password']
-        db_userid = user.find_one({"User_Id": userid})
-        print(db_userid.get('User_Id'))
-        db_pass = user.find_one({"Password": password})
-        print(db_pass.get('Password'))
-        if userid != db_userid.get('User_Id'):
-            form = LoginForm()
-            flash("User does not exist.\nPlease enter valid user id.")
-            return render_template('login.html', form=form)
-        elif password != db_pass.get('Password'):
-            form = LoginForm()
-            flash("Password does not matches.\nPlease enter valid password.")
-            return render_template('login.html', form=form)
-        else:
-            return render_template('home.html')
-
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        flash('All fields are required.')
-    return render_template('login.html', form=form)
-
-
-@app.route('/signup')
-def signup():
-    form = SignUpForm()
-    if form.validate_on_submit():
-        flash('All fields are required.')
-    return render_template('sign_up.html', form=form)
-
-
-@app.route('/cars')
-def cars():
     return render_template("cars.html")
 
 
