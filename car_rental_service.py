@@ -49,14 +49,16 @@ def home1():
         userid = request.form['userid']
         password = request.form['password']
         db_userid = user.find_one({"User_Id": userid})
+        if db_userid == None:
+            flash("User does not exist")
+            return render_template('login.html', form=form)
         # print(db_userid.get('User_Id'))
-        db_pass = user.find_one({"Password": password})
-        if userid != db_userid.get('User_Id'):
-            flash("Invalid User")
-            return render_template('login.html', form=form)
-        if password != db_pass.get('Password'):
-            flash("Invalid Password")
-            return render_template('login.html', form=form)
+        else:
+            db_pass = user.find_one({"User_Id": userid})
+            # print(db_pass)
+            if password != db_pass.get('Password'):
+                flash("Invalid Password")
+                return render_template('login.html', form=form)
         session['userid'] = request.form['userid']
     return render_template('home.html')
 
