@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}SIGN UP{% endblock %}
+
+{% block main %}
+       <div class="container-fluid content" id="container1">
+           <form action="{{ url_for('home') }}" class="form-inline" method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-xs-12 col-lg-12 col col-xs-offset-0" style="padding-top: 100px;">
+                        <div class="panel" id="try1">
+                            <div class="panel-heading"><center><b style="color:black;">NEW USER</b></center></div><br>
+                            <b style="color:black;">Contact & User Details:</b>
+                                <div class="panel-body">
+
+                                {{ form.hidden_tag() }}
+                                <div class="form-group">
+                                    <span style="color:black;">{{ form.contact.label }}</span><br>
+                                    {{ form.contact(style="border: none; opacity: 0.6", class="form-control", id="contact", placeholder="Contact Number") }}
+                                </div>
+
+                                <div class="form-group"  style="padding-left: 100px;">
+                                    <span style="color:black;">{{ form.email.label }}</span><br>
+                                    {{ form.email(style="border: none; opacity: 0.6", class="form-control", id="email", placeholder="E-mail") }}
+                                </div>
+
+                                <div class="form-group"  style="padding-left: 100px;">
+                                    <span style="color:black;">{{ form.userid.label }}</span><br>
+                                    {{ form.userid(style="border: none; opacity: 0.6", class="form-control", id="userid", placeholder="User ID") }}
+                               </div>
+
+                                <div class="form-group"  style="padding-left: 100px;">
+                                    <span style="color:black;">{{ form.password.label }}</span><br>
+                                    {{ form.password(style="border: none; opacity: 0.6", class="form-control", id="pass", placeholder="Password") }}
+                                </div>
+
+                                <div class="form-group"  style="padding-left: 100px;">
+                                    <span style="color:black;">{{ form.password2.label }}</span><br>
+                                    {{ form.password2(style="border: none; opacity: 0.6", class="form-control", id="pass2", placeholder="Re-type same password") }}
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-lg-12 col col-xs-offset-0" style="padding-top: 20px;">
+                        <div class="panel" id="try1">
+                            <b style="color:black;">Personal Details:</b>
+                                <div class="panel-body">
+
+                                {{ form.hidden_tag() }}
+                                <div class="form-group">
+                                    <span style="color:black;">{{ form.fname.label }}</span><br>
+                                    {{ form.fname(style="border: none; opacity: 0.6", class="form-control", id="fname", placeholder="First Name") }}
+                                </div>
+
+                                <div class="form-group" style="padding-left: 100px;">
+                                    <span style="color:black;">{{ form.lname.label }}</span><br>
+                                    {{ form.lname(style="border: none; opacity: 0.6", class="form-control", id="lname", placeholder="Last Name") }}
+                                </div>
+
+                                <div class="form-group" style="padding-left: 100px;">
+                                    <span style="color:black;">{{ form.add.label }}</span><br>
+                                    {{ form.add(style="border: none; opacity: 0.6", class="form-control", id="add", placeholder="Enter Address") }}
+                                </div>
+
+                                <div class="form-group" style="padding-left: 100px;">
+                                    <span style="color:black;">{{ form.city.label }}</span><br>
+                                    {{ form.city(style="border: none; opacity: 0.6", class="form-control", id="city", placeholder="City") }}
+                                </div>
+
+                                <div class="form-group"  style="padding-left: 100px;">
+                                    <span style="color:black;">{{ form.pin.label }}</span><br>
+                                    {{ form.pin(style="border: none; opacity: 0.6", class="form-control", id="pin", placeholder="Pincode") }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-lg-12 col col-xs-offset-0" style="padding-top: 20px;">
+                        <div class="panel" id="try1">
+                            <b style="color:white;">License Details:</b>
+                                <div class="panel-body">
+
+                                {{ form.hidden_tag() }}
+                                <div class="form-group">
+                                    <span style="color:white;">{{ form.lic_num.label }}</span><br>
+                                    {{ form.lic_num(style="border: none; opacity: 0.6", class="form-control", id="lic_num", placeholder="License Number") }}
+                                </div>
+
+                                <div class="form-group" style="padding-left: 60px;">
+                                    <span style="color:white;">{{ form.lic_val.label }}</span><br>
+                                    {{ form.lic_val(style="border: none; opacity: 0.6", class="form-control", id="lic_val", placeholder="License Validity") }}
+                               </div>
+
+                                <div class="form-group" style="padding-left: 60px;">
+                                    <span style="color:white;">{{ form.rto.label }}</span><br>
+                                    {{ form.rto(style="border: none; opacity: 0.6", class="form-control", id="rto", placeholder="RTO Circle") }}
+                                </div>
+
+                                <div class="form-group" style="padding-left: 60px; padding-bottom: 20px;">
+                                    <span style="color:white;">{{ form.lic_front.label }}</span><br>
+                                    {{ form.lic_front(style="border: none; opacity: 0.6", class="form-control", id="lic_front", placeholder="Front Side of License") }}
+                               </div>
+
+                                <div class="form-group" style="padding-left: 60px; padding-bottom: 20px;">
+                                    <span style="color:white;">{{ form.lic_rear.label }}</span><br>
+                                    {{ form.lic_rear(style="border: none; opacity: 0.6", class="form-control", id="lic_rear", placeholder="Rear Side of License") }}
+                                </div>
+                                <br>
+                                {{ form.submit(style="color: white; ", id="btn", class="btn btn-block") }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </form>
+       </div>
+
+{% endblock %}
