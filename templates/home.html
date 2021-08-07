@@ -1,27 +1,93 @@
 {% extends 'base.html' %}
 
 {% block title %}Home{% endblock %}
-
+<style>
+    label {display:inline-block;}
+</style>
 {% block main %}
+
+<br> <br>
+<div class="container-fluid content">
+    <div class="row">
+        <div class="col" id="banner">
+            <div class="col-sm-6 col-lg-6 col" id="rental"> <br>
+                <div class="row"> <br>
+                    <div class="col-sm-12 col-lg-12 col"> <br> <br>
+                        <div class="panel"> <br>
+                            <div class="panel-heading"><center><b style="color:black;">Rentals</b></center></div>
+                            <p><center>Rent a car and for days or hours</center></p>
+                            <form> <ul>
+                                <li><label> City</label>
+                                <input type="text" name="City" size="20" required style="width:300px"></li>
+                                <li><label>Start Date:</label>
+                                    <input type="datetime-local" id="start" name="trip-start" style="width:200px"></li>
+                                <li><label>End Date: </label>
+                                    <input type="datetime-local" id="end" name="trip-end" style="width:200px"></li>
+                            </ul>
+                            <button type="submit" value="Search" class = "btn" style="box-sizing:border-box; margin:30px;" formaction="login.html">Search</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+                 </div>
+
+                            <img src="./static/image/car.jpg" alt="safety" style="margin:50px 10px; float:right;" width="500" height="300">
+
+        </div>
+    </div>
+
+</div>
 
 <div class="container-fluid content">
     <div class="row">
         <div class="col" id="banner">
-            <div class="col-sm-6 col-lg-6 col" id="rental">
-                <div class="row">
-                    <div class="col-sm-12 col-lg-12 col">
-                        <div class="panel">
-                            <div class="panel-heading"><center>Rentals</center></div>
-                            <p><center>Rent a car and for days or hours</center></p>
+            <div class="col" id="rental" style="margin-left:300px;"> <br>
+                <div class="row"> <br>
+                    <div class="col" style="width:900px;" > <br> <br>
+                        <div class="panel"> <br>
+                            <div class="panel-heading"><center><b style="color:black;">Sanitized and Safe Cars</b></center></div>
+
+                            <img src="./static/image/s1.jpg" alt="safety" style="margin:10px 50px" width="200" height="100">
+                            <img src="./static/image/s2.jpg" alt="safety" style="margin:30px" width="200" height="100">
+                            <img src="./static/image/s3.jpg" alt="safety" style="margin:30px 20px" width="200" height="100">
 
                         </div>
+
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+
 </div>
 
+<div class="container-fluid content">
+    <div class="row">
+        <div class="col" id="banner"  >
+            <div class="col" id="rental"  style="margin-left:300px;"> <br>
+                <div class="row"> <br>
+                    <div class="col" style="width:900px;"> <br> <br>
+                        <div class="panel"> <br>
+                            <div class="panel-heading"><center><b style="color:black;">How it Works</b></center></div>
 
+                            <span class="fa fa-credit-card fa-5x" aria-hidden="true"> &emsp; <br> <h4>Book and Pay</h4></span>
+                            <span class="fa fa-arrow-circle-right fa-2x" aria-hidden="true">&emsp;</span>
+                            <span class="fa fa-car fa-5x" aria-hidden="true">&emsp;<br> <h4>Receive</h4></span>
+                            <span class="fa fa-arrow-circle-right fa-2x" aria-hidden="true">&emsp;</span>
+                            <span class="fa fa-road fa-5x" aria-hidden="true">&emsp; <br> <h4>Enjoy Driving</h4></span>
+                            <span class="fa fa-arrow-circle-right fa-2x" aria-hidden="true">&emsp;</span>
+                            <span class="fa fa-reply fa-5x" aria-hidden="true">&emsp; <br> <h4>Return at preferred Location</h4></span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% endblock %}
