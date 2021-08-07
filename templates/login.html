@@ -9,9 +9,14 @@
                     <div class="panel" id="try">
                         <div class="panel-heading"><center><b style="color:grey;">LOGIN</b></center></div><br>
                         <div class="panel-body">
-                            <form method="post">
+                            <form action="{{ url_for('home1') }}" method="post">
                                 {{ form.hidden_tag() }}
                                 <div class="form-group">
+                                    {% for message in get_flashed_messages() %}
+                                          <div class="container text-center">
+                                              <div class="p-3 mb-2 bg-danger text-white">{{ message }}</div>
+                                          </div><br>
+                                    {% endfor %}
                                     <span style="color:white;">{{ form.userid.label }}</span><br>
                                     {{ form.userid(style="border: none; opacity: 0.6", class="form-control", id="userid", placeholder="User ID") }}
                                 </div>
